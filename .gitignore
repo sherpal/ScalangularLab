@@ -1,0 +1,64 @@
+target
+
+.DS_Store
+.idea
+
+.bloop
+.metals
+project/metals.sbt
+
+project/target
+project/project/target
+project/.bloop
+
+*/target
+
+*.map
+
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+webapp/Laboratory/dist
+webapp/Laboratory/tmp
+webapp/Laboratory/out-tsc
+# Only exists if Bazel was run
+webapp/Laboratory/bazel-out
+
+# dependencies
+webapp/Laboratory/node_modules
+
+# profiling files
+webapp/Laboratory/chrome-profiler-events*.json
+webapp/Laboratory/speed-measure-plugin*.json
+
+# IDEs and editors
+webapp/Laboratory/.idea
+webapp/Laboratory/.project
+webapp/Laboratory/.classpath
+webapp/Laboratory/.c9/
+webapp/Laboratory/*.launch
+webapp/Laboratory/.settings/
+webapp/Laboratory/*.sublime-workspace
+
+# IDE - VSCode
+webapp/Laboratory/.vscode/*
+webapp/Laboratory/!.vscode/settings.json
+webapp/Laboratory/!.vscode/tasks.json
+webapp/Laboratory/!.vscode/launch.json
+webapp/Laboratory/!.vscode/extensions.json
+webapp/Laboratory/.history/*
+
+# misc
+webapp/Laboratory/.sass-cache
+webapp/Laboratory/connect.lock
+webapp/Laboratory/coverage
+webapp/Laboratory/libpeerconnection.log
+webapp/Laboratory/npm-debug.log
+webapp/Laboratory/yarn-error.log
+webapp/Laboratory/testem.log
+webapp/Laboratory/typings
+
+
+

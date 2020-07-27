@@ -1,0 +1,20 @@
+<h2>Form for a Book Store</h2>
+
+<form [formGroup]="this.typedFormGroup.formGroup()">
+  <label>
+    First Name:
+    <input type="text" formControlName="owner" />
+  </label>
+
+  <div formGroupName="address">
+    <h3>Address</h3>
+    <label>Street</label><input type="text" formControlName="street" />
+  </div>
+</form>
+
+<div>
+  Below, you can see the json representation of the class. It's ugly, but it
+  proves that we actually manipulate instances of a class, and not some raw json
+  object.
+</div>
+<pre>{{ formValue$ | async | json }}</pre>
