@@ -26,7 +26,7 @@ The package `utils` contains three special type classes `JSObjectEncoder`, `JSOb
 
 #### Reactive forms
 
-Angular [Reactive Forms](https://angular.io/guide/reactive-forms) allow one to bind form input to JavaScript object, with as small reactive interface on top. The main issue of that library is that all types vanish in the process, making it extremely weak to refactoring, and unpleasant to work with on a larger scale.
+Angular [Reactive Forms](https://angular.io/guide/reactive-forms) allow one to bind form input to JavaScript objects, with a small reactive interface on top. The main issue of that library is that all types vanish in the process, making it extremely weak to refactoring, and unpleasant to work with on a larger scale.
 
 The `forms.abstractcontrolwrapper` packages builds a Scala layer on top of that to overcome that difficulty.
 
@@ -41,3 +41,7 @@ In order to use it, you simply have to define your form model as Scala case clas
 In the `forms.abstractcontrolwrappers.usage`, you'll see a class `BookStore` exporting everything that TypeScript needs for automatically generating `FormGroups` for that class.
 
 TypeScript usage of the `BookStore` forms can be found in the `ScalaFormGroupDemoComponent` component.
+
+##### Limitation
+
+The current implementation currently does not expose a typed layer for dealing with arrays. That means that if your model has lists, you will need to access the `FormArray`s with the unsafe `get` api of form groups.
