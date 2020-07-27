@@ -16,6 +16,10 @@ Typings of used JS/TS libraries are automatically generated using [ScalablyTyped
 
 Each top level package corresponds to a theme that we explored in the process. The `utils` package contains some general facilities and the `facades` package contains hand-written typings for JS/TS libraries.
 
+## JS Object Codec
+
+The package `utils` contains three special type classes `JSObjectEncoder`, `JSObjectDecoder` and one grouping them both, `JSObjectCodec`. This type classes play similar role to JSON encoder and decoder, except that they encode to and decode from raw JS object. They are very helpful when Scala needs to talk to an untyped TypeScript API such as, for example, the `HttpClient` or `FormGroup`s.
+
 ## Themes
 
 ### Forms
